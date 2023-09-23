@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes */
+@layer components {
+    .index-article {
+        @apply shadow-[inset_0_0_30px_-8px] shadow-black/75 hover:shadow-[inset_0_0_10px_-3px] hover:shadow-white dark:bg-gray-900 rounded-lg py-3 px-5 transition duration-150 ease-in-out text-indigo-300 hover:text-indigo-500 active:text-indigo-700 cursor-pointer
+    }
+}
+
+/* Custom base styles */
+@layer base {
+    [x-cloak] {
+        display: none;
+    }
+
+    h1 {
+        @apply font-bold text-indigo-600 uppercase
+    }
+
+    h1::selection,
+    h2::selection,
+    h3::selection,
+    h4::selection {
+        @apply bg-violet-700/75 text-teal-400
+    }
+
+    *::selection {
+        @apply bg-indigo-700 text-white
+    }
+
+    p {
+        word-spacing: 0.2em;
+    }
+
+    /*** Custom scrollbar ***/
+    html {
+        scrollbar-face-color: #3730a3;
+        scrollbar-base-color: #3730a3;
+        scrollbar-3dlight-color: #3730a3;
+        scrollbar-highlight-color: #3730a3;
+        scrollbar-track-color: #201517;
+        scrollbar-arrow-color: #201517;
+        scrollbar-shadow-color: #3730a3;
+        scrollbar-dark-shadow-color: #3730a3;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-resizer {
+        background-color: #3730a3;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: #201517;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #3730a3;
+        border-radius: 4px;
+    }
+
+    /*********************************/
+}
